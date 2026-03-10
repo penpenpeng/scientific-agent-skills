@@ -56,14 +56,25 @@ uv run python .claude/skills/paper-reader/scripts/extract_pdf.py <pdf_path> <out
 4. **结论与创新点** → 参考 `references/04-conclusion.md`
 5. **技术路线** → 参考 `references/05-technical-roadmap.md`
 
-### Step 5: 生成报告
+### Step 5: 交叉验证
+
+将Methods中的检测指标与Results中的数据进行匹配：
+- 每个检测指标是否都有对应结果？
+- 每个结果图表对应哪个检测方法？
+- 标注验证状态：已验证/未找到结果
+### Step 6: 提取核心结果
+
+按类别整理核心发现
+
+
+### Step 7: 生成报告
 
 将解析结果保存为Markdown文件：
 ```
 paper-reader—[论文标题].md
 ```
 
-### Step 6: 清理临时文件
+### Step 8: 清理临时文件
 
 ```bash
 # 删除临时提取的文本文件
